@@ -5,6 +5,7 @@ using MediatR;
 using NServiceBus;
 using Sample.MediatR.Domain.Contracts;
 using Sample.MediatR.Message;
+using Sample.MediatR.Persistence.Configuration;
 
 namespace Sample.MediatR.Application.Product.Create;
 
@@ -12,10 +13,10 @@ public class CreateProductCommandHandler : IRequestHandler<CreateProductCommand,
 {
     private readonly IMapper _mapper;
     private readonly IMediator _mediator;
-    private readonly IMessageSession _messageSession;
+    private readonly INServiceBus _messageSession;
     private readonly IRepository<Domain.Product> _context;
 
-    public CreateProductCommandHandler(IRepository<Domain.Product> context, IMapper mapper, IMediator _mediator, IMessageSession messageSession)
+    public CreateProductCommandHandler(IRepository<Domain.Product> context, IMapper mapper, IMediator _mediator, INServiceBus messageSession)
     {
         _context = context;
         _mapper = mapper;

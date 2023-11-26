@@ -5,7 +5,6 @@ using MediatR;
 using Sample.MediatR.Domain;
 using Sample.MediatR.Persistence;
 using Sample.MediatR.Persistence.ServiceRegistration;
-using Microsoft.Extensions.Configuration;
 using Sample.MediatR.Persistence.NServiceBusHandler;
 
 try
@@ -16,8 +15,8 @@ try
     builder.Services.AddApiConfiguration();
 
     string connection = builder.Configuration.GetConnectionString("AppConnectionString");
-    builder.Services.AddPersistence(connection);
     builder.Services.ConfigureNServiceBus();
+    builder.Services.AddPersistence(connection);
     builder.Services.AddAutoMapper(typeof(MapperProfile));
 
     var array = new[] {
@@ -39,6 +38,7 @@ catch (AggregateException ex)
 {
     foreach (var innerException in ex.InnerExceptions)
     {
+        Console.WriteLine(innerException.Message);
         // Log or inspect each inner exception to identify the root cause.
     }
 }

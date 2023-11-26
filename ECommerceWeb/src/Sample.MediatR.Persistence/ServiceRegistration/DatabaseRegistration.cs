@@ -13,6 +13,7 @@ namespace Sample.MediatR.Persistence.ServiceRegistration
         {
             services.AddScoped(typeof(IRepository<Order>), typeof(Repository<Order>));
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+            services.AddScoped(typeof(INServiceBus), typeof(NServiceBusService));
             services.AddSingleton<IModelConfiguration, SqlModelConfiguration>();
             services.AddDbContext<AppDbContext>(options =>
             {

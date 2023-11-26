@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sample.MediatR.Persistence"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sample.MediatR.Domain", "src\Sample.MediatR.Domain\Sample.MediatR.Domain.csproj", "{B6FFB0AD-BF37-402B-A7FE-47C83539CE93}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample.MediatR.Message", "src\Sample.MediatR.Message\Sample.MediatR.Message.csproj", "{1BBD5DB1-D1E2-430A-87B7-6F386EF9BB33}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sample.MediatR.Message", "src\Sample.MediatR.Message\Sample.MediatR.Message.csproj", "{1BBD5DB1-D1E2-430A-87B7-6F386EF9BB33}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample.MediatR.Application.UnitTest", "src\Sample.MediatR.Application.UnitTest\Sample.MediatR.Application.UnitTest.csproj", "{0468D7FA-F0FB-4ED3-A609-14F0F9698316}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{1BBD5DB1-D1E2-430A-87B7-6F386EF9BB33}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1BBD5DB1-D1E2-430A-87B7-6F386EF9BB33}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1BBD5DB1-D1E2-430A-87B7-6F386EF9BB33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0468D7FA-F0FB-4ED3-A609-14F0F9698316}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0468D7FA-F0FB-4ED3-A609-14F0F9698316}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0468D7FA-F0FB-4ED3-A609-14F0F9698316}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0468D7FA-F0FB-4ED3-A609-14F0F9698316}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

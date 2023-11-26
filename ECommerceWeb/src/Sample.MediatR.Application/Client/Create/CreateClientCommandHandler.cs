@@ -8,25 +8,27 @@ using Sample.MediatR.Persistence.Notification;
 
 namespace Sample.MediatR.Application.Client.Create;
 
-public class CreateClientCommandHandler : IRequestHandler<CreateClientCommand, int>
+public class CreateClientCommandHandler : IRequestHandler<CreateClientCommand, Domain.Client>
 {
     private readonly IMapper _mapper;
     private readonly IMediator _mediator;
-    private readonly IRepository<Domain.Client> _context;
+    private readonly IRepository<Domain.Client> repository;
 
     public CreateClientCommandHandler(IRepository<Domain.Client> context, IMapper mapper, IMediator mediator)
     {
-        _context = context;
+        repository = context;
         _mapper = mapper;
-        this._mediator = mediator;
+        _mediator = mediator;
     }
 
-    public async Task<int> Handle(CreateClientCommand request, CancellationToken cancellationToken)
+    public async Task<Domain.Client> Handle(CreateClientCommand request, CancellationToken cancellationToken)
     {
         var client = _mapper.Map<Domain.Client>(request);
-        var result = await _context.AddAsync(client);
-        await _mediator.Publish(new ClientCreatedDoaminEvent(result.Id));
-        return await Task.FromResult(result.Id);
+        var result = await repository.AddAsync(client);
 
+        if (result != null)
+            await _mediator.Publish(new ClientCreatedDoaminEvent(result.Id));
+
+        return result;
     }
 }

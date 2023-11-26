@@ -5,6 +5,7 @@ using SagaPattern.Saga.Messages;
 using Sample.MediatR.Application.Order.Get;
 using Sample.MediatR.Domain;
 using Sample.MediatR.Application.Order.Create;
+using Sample.MediatR.Persistence.Configuration;
 
 namespace Sample.MediatR.WebApi.Controllers
 {
@@ -13,9 +14,9 @@ namespace Sample.MediatR.WebApi.Controllers
     public class OrderController : ControllerBase
     {
         private readonly IMediator _mediator;
-        private readonly IMessageSession _messageSession;
+        private readonly INServiceBus _messageSession;
 
-        public OrderController(IMediator mediator, IMessageSession messageSession)
+        public OrderController(IMediator mediator, INServiceBus messageSession)
         {
             this._mediator = mediator;
             _messageSession = messageSession;
@@ -37,13 +38,9 @@ namespace Sample.MediatR.WebApi.Controllers
             var order = await _mediator.Send(createOrderCommand);
             var startOrderMessage = new StartOrder { OrderId = order.Id, };
 
-            StartPayment x1 = new StartPayment() { OrderId = order.Id };
-            StartShipment x2 = new StartShipment() { OrderId = order.Id };
-
             await _messageSession.SendLocal(startOrderMessage);
 
             Thread.Sleep(5000);
-            //await _messageSession.Send("Application.Shipping", x2);
 
             return Ok(order);
         }

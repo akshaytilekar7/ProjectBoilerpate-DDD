@@ -2,7 +2,7 @@ using System;
 using MediatR;
 
 namespace Sample.MediatR.Application.Client.Create;
-public class CreateClientCommand : IRequest<int>
+public class CreateClientCommand : IRequest<Domain.Client>
 {
     public string Name { get; set; }
     public string Email { get; set; }
