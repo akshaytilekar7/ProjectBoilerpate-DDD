@@ -1,5 +1,5 @@
 # sample-cqrs-mediatr
-CQRS with MediatR in .NET 7.0
+CQRS with MediatR in .NET 6.0
 
 # ProjectName
   - **src**
