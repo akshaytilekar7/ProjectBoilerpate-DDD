@@ -47,16 +47,18 @@ Domain Layer:
 
 Infrastructure Layer
 
-    -   Technical concerns such as data access, external integrations.
+    -   Technical concerns such as data access, and external integrations.
     -   Components like databases, DbContext and 
     
 
 
 ### 
-- [x] .NET 7.0
-- [x] MediatR 
-- [x] Swagger 
-- [x] Serilog 
+- [x] .NET 6.0
+- [x] MediatR CQRS
+- [x] Repository
+- [x] NServiceBus
 - [x] Middlewares
+- [x] Swagger 
+- [x] Unit Test
 
-https://henriquemauri.net/mediatr-no-net-6-0/
+
