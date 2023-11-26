@@ -1,6 +1,5 @@
 using System.Text.Json;
 using Microsoft.AspNetCore.Http;
-using Serilog;
 
 namespace Sample.MediatR.WebApi.Core.Middlewares;
 public class ErrorHandlingMiddleware
@@ -25,9 +24,7 @@ public class ErrorHandlingMiddleware
     }
 
     private static async Task HandleExceptionAsync(HttpContext context, Exception exception)
-        {
-        Log.Error(exception, "Erro não tratado");
-
+    {
         context.Response.ContentType = "application/json";
         context.Response.StatusCode = StatusCodes.Status500InternalServerError;
 

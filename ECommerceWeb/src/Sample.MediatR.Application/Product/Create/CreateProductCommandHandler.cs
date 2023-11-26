@@ -5,7 +5,6 @@ using MediatR;
 using NServiceBus;
 using Sample.MediatR.Domain.Contracts;
 using Sample.MediatR.Message;
-using Serilog;
 
 namespace Sample.MediatR.Application.Product.Create;
 
@@ -28,8 +27,6 @@ public class CreateProductCommandHandler : IRequestHandler<CreateProductCommand,
         var entity = _mapper.Map<Domain.Product>(request);
 
         await _context.AddAsync(entity);
-        Log.Information($"add product {entity.Id}");
-
         await _messageSession.Publish(new ProductCreated() {  Product = entity });
 
         return await Task.FromResult("Ok");

@@ -1,6 +1,5 @@
 using Microsoft.EntityFrameworkCore;
 using Sample.MediatR.Application;
-using Serilog;
 using Sample.MediatR.Persistence.Extensions;
 using MediatR;
 using Sample.MediatR.Domain;
@@ -25,7 +24,7 @@ try
         typeof(Program).Assembly,
         typeof(BaseEntity).Assembly,
         typeof(MapperProfile).Assembly,
-        typeof(SerilogExtensions).Assembly,
+        typeof(Repository<>).Assembly,
         typeof(StartOrderSagaHandler).Assembly
     };
 
@@ -47,10 +46,9 @@ catch (Exception ex)
 {
     Console.WriteLine(ex.Message);
     Console.WriteLine(ex.ToString());
-    Log.Fatal(ex, "Host terminated unexpectedly");
+    Console.WriteLine("Host terminated unexpectedly");
 }
 finally
 {
-    Log.Information("Server Shutting down...");
-    Log.CloseAndFlush();
+    Console.WriteLine("Server Shutting down...");
 }
