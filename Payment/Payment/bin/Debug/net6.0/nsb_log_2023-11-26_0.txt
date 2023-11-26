@@ -1,0 +1,236 @@
+﻿2023-11-26 09:50:14.715 INFO  Logging to 'C:\Akshay\Payment\Payment\bin\Debug\net6.0\' with level Info
+2023-11-26 09:50:15.118 INFO  No valid license could be found. Falling back to trial license with start date '2023-10-05'.
+2023-11-26 09:50:15.125 ERROR Trial license expired. Get your free development license at https://particular.net/license/nservicebus?v=7.8.2&t=0&p=windows
+2023-11-26 09:50:15.130 WARN  Opening browser to: https://particular.net/license/nservicebus?v=7.8.2&t=0&p=windows
+2023-11-26 09:51:11.463 ERROR Your license has expired
+2023-11-26 09:52:07.678 ERROR Your license has expired
+2023-11-26 10:15:52.320 INFO  Logging to 'C:\Akshay\Payment\Payment\bin\Debug\net6.0\' with level Info
+2023-11-26 10:15:52.693 INFO  No valid license could be found. Falling back to trial license with start date '2023-10-05'.
+2023-11-26 10:15:52.699 ERROR Trial license expired. Get your free development license at https://particular.net/license/nservicebus?v=7.8.2&t=0&p=windows
+2023-11-26 10:15:52.704 WARN  Opening browser to: https://particular.net/license/nservicebus?v=7.8.2&t=0&p=windows
+2023-11-26 10:16:56.346 ERROR Your license has expired
+2023-11-26 10:24:14.700 ERROR Your license has expired
+2023-11-26 10:27:23.633 ERROR Your license has expired
+2023-11-26 10:27:52.815 INFO  Logging to 'C:\Akshay\Payment\Payment\bin\Debug\net6.0\' with level Info
+2023-11-26 10:27:53.120 INFO  No valid license could be found. Falling back to trial license with start date '2023-10-05'.
+2023-11-26 10:27:53.125 ERROR Trial license expired. Get your free development license at https://particular.net/license/nservicebus?v=7.8.2&t=0&p=windows
+2023-11-26 10:50:44.985 INFO  Logging to 'C:\Akshay\Payment\Payment\bin\Debug\net6.0\' with level Info
+2023-11-26 10:50:45.285 INFO  No valid license could be found. Falling back to trial license with start date '2023-10-05'.
+2023-11-26 10:50:45.290 ERROR Trial license expired. Get your free development license at https://particular.net/license/nservicebus?v=7.8.2&t=0&p=windows
+2023-11-26 10:59:08.777 INFO  Logging to 'C:\Akshay\Payment\Payment\bin\Debug\net6.0\' with level Info
+2023-11-26 10:59:09.363 INFO  No valid license could be found. Falling back to trial license with start date '2023-10-05'.
+2023-11-26 10:59:09.370 ERROR Trial license expired. Get your free development license at https://particular.net/license/nservicebus?v=7.8.2&t=0&p=windows
+2023-11-26 10:59:09.376 WARN  Opening browser to: https://particular.net/license/nservicebus?v=7.8.2&t=0&p=windows
+2023-11-26 11:04:28.565 INFO  Logging to 'C:\Akshay\Payment\Payment\bin\Debug\net6.0\' with level Info
+2023-11-26 11:04:29.076 INFO  No valid license could be found. Falling back to trial license with start date '2023-10-05'.
+2023-11-26 11:04:29.089 ERROR Trial license expired. Get your free development license at https://particular.net/license/nservicebus?v=7.8.2&t=0&p=windows
+2023-11-26 11:04:29.096 WARN  Opening browser to: https://particular.net/license/nservicebus?v=7.8.2&t=0&p=windows
+2023-11-26 11:16:51.758 WARN  'Application.Payment MessagePump' consumer canceled by broker
+2023-11-26 11:16:51.763 WARN  The circuit breaker for 'Application.Payment MessagePump' is now in the armed state
+2023-11-26 11:16:51.779 INFO  'Application.Payment MessagePump': Attempting to reconnect in 10 seconds.
+2023-11-26 11:17:01.871 INFO  'Application.Payment MessagePump': Reconnecting to the broker failed: RabbitMQ.Client.Exceptions.OperationInterruptedException: The AMQP operation was interrupted: AMQP close-reason, initiated by Peer, code=404, text='NOT_FOUND - no queue 'Application.Payment' in vhost '/'', classId=60, methodId=20
+   at RabbitMQ.Client.Impl.SimpleBlockingRpcContinuation.GetReply(TimeSpan timeout)
+   at RabbitMQ.Client.Impl.ModelBase.BasicConsume(String queue, Boolean autoAck, String consumerTag, Boolean noLocal, Boolean exclusive, IDictionary`2 arguments, IBasicConsumer consumer)
+   at RabbitMQ.Client.Impl.AutorecoveringModel.BasicConsume(String queue, Boolean autoAck, String consumerTag, Boolean noLocal, Boolean exclusive, IDictionary`2 arguments, IBasicConsumer consumer)
+   at NServiceBus.Transport.RabbitMQ.MessagePump.ConnectToBroker() in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 124
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Reconnect() in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 235
+2023-11-26 11:17:01.881 INFO  'Application.Payment MessagePump': Attempting to reconnect in 10 seconds.
+2023-11-26 11:17:11.927 INFO  'Application.Payment MessagePump': Reconnecting to the broker failed: RabbitMQ.Client.Exceptions.OperationInterruptedException: The AMQP operation was interrupted: AMQP close-reason, initiated by Peer, code=404, text='NOT_FOUND - no queue 'Application.Payment' in vhost '/'', classId=60, methodId=20
+   at RabbitMQ.Client.Impl.SimpleBlockingRpcContinuation.GetReply(TimeSpan timeout)
+   at RabbitMQ.Client.Impl.ModelBase.BasicConsume(String queue, Boolean autoAck, String consumerTag, Boolean noLocal, Boolean exclusive, IDictionary`2 arguments, IBasicConsumer consumer)
+   at RabbitMQ.Client.Impl.AutorecoveringModel.BasicConsume(String queue, Boolean autoAck, String consumerTag, Boolean noLocal, Boolean exclusive, IDictionary`2 arguments, IBasicConsumer consumer)
+   at NServiceBus.Transport.RabbitMQ.MessagePump.ConnectToBroker() in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 124
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Reconnect() in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 235
+2023-11-26 11:17:11.934 INFO  'Application.Payment MessagePump': Attempting to reconnect in 10 seconds.
+2023-11-26 11:17:16.107 INFO  Logging to 'C:\Akshay\Payment\Payment\bin\Debug\net6.0\' with level Info
+2023-11-26 11:17:16.809 INFO  No valid license could be found. Falling back to trial license with start date '2023-10-05'.
+2023-11-26 11:17:16.820 ERROR Trial license expired. Get your free development license at https://particular.net/license/nservicebus?v=7.8.2&t=0&p=windows
+2023-11-26 11:17:16.861 WARN  Opening browser to: https://particular.net/license/nservicebus?v=7.8.2&t=0&p=windows
+2023-11-26 11:19:37.267 WARN  'Application.Payment MessagePump' consumer canceled by broker
+2023-11-26 11:19:37.273 WARN  The circuit breaker for 'Application.Payment MessagePump' is now in the armed state
+2023-11-26 11:19:37.288 INFO  'Application.Payment MessagePump': Attempting to reconnect in 10 seconds.
+2023-11-26 11:19:47.362 INFO  'Application.Payment MessagePump': Reconnecting to the broker failed: RabbitMQ.Client.Exceptions.OperationInterruptedException: The AMQP operation was interrupted: AMQP close-reason, initiated by Peer, code=404, text='NOT_FOUND - no queue 'Application.Payment' in vhost '/'', classId=60, methodId=20
+   at RabbitMQ.Client.Impl.SimpleBlockingRpcContinuation.GetReply(TimeSpan timeout)
+   at RabbitMQ.Client.Impl.ModelBase.BasicConsume(String queue, Boolean autoAck, String consumerTag, Boolean noLocal, Boolean exclusive, IDictionary`2 arguments, IBasicConsumer consumer)
+   at RabbitMQ.Client.Impl.AutorecoveringModel.BasicConsume(String queue, Boolean autoAck, String consumerTag, Boolean noLocal, Boolean exclusive, IDictionary`2 arguments, IBasicConsumer consumer)
+   at NServiceBus.Transport.RabbitMQ.MessagePump.ConnectToBroker() in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 124
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Reconnect() in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 235
+2023-11-26 11:19:47.369 INFO  'Application.Payment MessagePump': Attempting to reconnect in 10 seconds.
+2023-11-26 11:19:56.944 INFO  Logging to 'C:\Akshay\Payment\Payment\bin\Debug\net6.0\' with level Info
+2023-11-26 11:19:57.572 INFO  No valid license could be found. Falling back to trial license with start date '2023-10-05'.
+2023-11-26 11:19:57.592 ERROR Trial license expired. Get your free development license at https://particular.net/license/nservicebus?v=7.8.2&t=0&p=windows
+2023-11-26 11:19:57.609 WARN  Opening browser to: https://particular.net/license/nservicebus?v=7.8.2&t=0&p=windows
+2023-11-26 11:34:22.741 INFO  Logging to 'C:\Akshay\Payment\Payment\bin\Debug\net6.0\' with level Info
+2023-11-26 11:34:23.145 INFO  No valid license could be found. Falling back to trial license with start date '2023-10-05'.
+2023-11-26 11:34:23.152 ERROR Trial license expired. Get your free development license at https://particular.net/license/nservicebus?v=7.8.2&t=0&p=windows
+2023-11-26 11:34:23.157 WARN  Opening browser to: https://particular.net/license/nservicebus?v=7.8.2&t=0&p=windows
+2023-11-26 11:35:37.769 WARN  'Application.Payment MessagePump' consumer canceled by broker
+2023-11-26 11:35:37.777 WARN  The circuit breaker for 'Application.Payment MessagePump' is now in the armed state
+2023-11-26 11:35:37.795 INFO  'Application.Payment MessagePump': Attempting to reconnect in 10 seconds.
+2023-11-26 11:35:47.859 INFO  'Application.Payment MessagePump': Reconnecting to the broker failed: RabbitMQ.Client.Exceptions.OperationInterruptedException: The AMQP operation was interrupted: AMQP close-reason, initiated by Peer, code=404, text='NOT_FOUND - no queue 'Application.Payment' in vhost '/'', classId=60, methodId=20
+   at RabbitMQ.Client.Impl.SimpleBlockingRpcContinuation.GetReply(TimeSpan timeout)
+   at RabbitMQ.Client.Impl.ModelBase.BasicConsume(String queue, Boolean autoAck, String consumerTag, Boolean noLocal, Boolean exclusive, IDictionary`2 arguments, IBasicConsumer consumer)
+   at RabbitMQ.Client.Impl.AutorecoveringModel.BasicConsume(String queue, Boolean autoAck, String consumerTag, Boolean noLocal, Boolean exclusive, IDictionary`2 arguments, IBasicConsumer consumer)
+   at NServiceBus.Transport.RabbitMQ.MessagePump.ConnectToBroker() in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 124
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Reconnect() in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 235
+2023-11-26 11:35:47.864 INFO  'Application.Payment MessagePump': Attempting to reconnect in 10 seconds.
+2023-11-26 11:36:07.367 INFO  Logging to 'C:\Akshay\Payment\Payment\bin\Debug\net6.0\' with level Info
+2023-11-26 11:36:07.827 INFO  No valid license could be found. Falling back to trial license with start date '2023-10-05'.
+2023-11-26 11:36:07.834 ERROR Trial license expired. Get your free development license at https://particular.net/license/nservicebus?v=7.8.2&t=0&p=windows
+2023-11-26 11:36:07.840 WARN  Opening browser to: https://particular.net/license/nservicebus?v=7.8.2&t=0&p=windows
+2023-11-26 11:37:16.710 INFO  Logging to 'C:\Akshay\Payment\Payment\bin\Debug\net6.0\' with level Info
+2023-11-26 11:37:17.012 INFO  No valid license could be found. Falling back to trial license with start date '2023-10-05'.
+2023-11-26 11:37:17.019 ERROR Trial license expired. Get your free development license at https://particular.net/license/nservicebus?v=7.8.2&t=0&p=windows
+2023-11-26 11:37:17.023 WARN  Opening browser to: https://particular.net/license/nservicebus?v=7.8.2&t=0&p=windows
+2023-11-26 11:40:23.245 WARN  'Application.Payment MessagePump' consumer canceled by broker
+2023-11-26 11:40:23.251 WARN  The circuit breaker for 'Application.Payment MessagePump' is now in the armed state
+2023-11-26 11:40:23.268 INFO  'Application.Payment MessagePump': Attempting to reconnect in 10 seconds.
+2023-11-26 11:40:33.309 INFO  'Application.Payment MessagePump': Reconnecting to the broker failed: RabbitMQ.Client.Exceptions.OperationInterruptedException: The AMQP operation was interrupted: AMQP close-reason, initiated by Peer, code=404, text='NOT_FOUND - no queue 'Application.Payment' in vhost '/'', classId=60, methodId=20
+   at RabbitMQ.Client.Impl.SimpleBlockingRpcContinuation.GetReply(TimeSpan timeout)
+   at RabbitMQ.Client.Impl.ModelBase.BasicConsume(String queue, Boolean autoAck, String consumerTag, Boolean noLocal, Boolean exclusive, IDictionary`2 arguments, IBasicConsumer consumer)
+   at RabbitMQ.Client.Impl.AutorecoveringModel.BasicConsume(String queue, Boolean autoAck, String consumerTag, Boolean noLocal, Boolean exclusive, IDictionary`2 arguments, IBasicConsumer consumer)
+   at NServiceBus.Transport.RabbitMQ.MessagePump.ConnectToBroker() in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 124
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Reconnect() in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 235
+2023-11-26 11:40:33.314 INFO  'Application.Payment MessagePump': Attempting to reconnect in 10 seconds.
+2023-11-26 11:40:43.355 INFO  'Application.Payment MessagePump': Reconnecting to the broker failed: RabbitMQ.Client.Exceptions.OperationInterruptedException: The AMQP operation was interrupted: AMQP close-reason, initiated by Peer, code=404, text='NOT_FOUND - no queue 'Application.Payment' in vhost '/'', classId=60, methodId=20
+   at RabbitMQ.Client.Impl.SimpleBlockingRpcContinuation.GetReply(TimeSpan timeout)
+   at RabbitMQ.Client.Impl.ModelBase.BasicConsume(String queue, Boolean autoAck, String consumerTag, Boolean noLocal, Boolean exclusive, IDictionary`2 arguments, IBasicConsumer consumer)
+   at RabbitMQ.Client.Impl.AutorecoveringModel.BasicConsume(String queue, Boolean autoAck, String consumerTag, Boolean noLocal, Boolean exclusive, IDictionary`2 arguments, IBasicConsumer consumer)
+   at NServiceBus.Transport.RabbitMQ.MessagePump.ConnectToBroker() in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 124
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Reconnect() in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 235
+2023-11-26 11:40:43.363 INFO  'Application.Payment MessagePump': Attempting to reconnect in 10 seconds.
+2023-11-26 11:40:49.807 INFO  Logging to 'C:\Akshay\Payment\Payment\bin\Debug\net6.0\' with level Info
+2023-11-26 11:40:50.331 INFO  No valid license could be found. Falling back to trial license with start date '2023-10-05'.
+2023-11-26 11:40:50.342 ERROR Trial license expired. Get your free development license at https://particular.net/license/nservicebus?v=7.8.2&t=0&p=windows
+2023-11-26 11:43:05.983 WARN  'Application.Payment MessagePump' consumer canceled by broker
+2023-11-26 11:43:05.988 WARN  The circuit breaker for 'Application.Payment MessagePump' is now in the armed state
+2023-11-26 11:43:06.003 INFO  'Application.Payment MessagePump': Attempting to reconnect in 10 seconds.
+2023-11-26 11:43:16.977 INFO  Logging to 'C:\Akshay\Payment\Payment\bin\Debug\net6.0\' with level Info
+2023-11-26 11:43:17.315 INFO  No valid license could be found. Falling back to trial license with start date '2023-10-05'.
+2023-11-26 11:43:17.321 ERROR Trial license expired. Get your free development license at https://particular.net/license/nservicebus?v=7.8.2&t=0&p=windows
+2023-11-26 11:43:17.326 WARN  Opening browser to: https://particular.net/license/nservicebus?v=7.8.2&t=0&p=windows
+2023-11-26 11:43:25.612 INFO  Logging to 'C:\Akshay\Payment\Payment\bin\Debug\net6.0\' with level Info
+2023-11-26 11:43:26.115 INFO  No valid license could be found. Falling back to trial license with start date '2023-10-05'.
+2023-11-26 11:43:26.125 ERROR Trial license expired. Get your free development license at https://particular.net/license/nservicebus?v=7.8.2&t=0&p=windows
+2023-11-26 12:01:09.743 WARN  'Application.Payment MessagePump' consumer canceled by broker
+2023-11-26 12:01:09.750 WARN  The circuit breaker for 'Application.Payment MessagePump' is now in the armed state
+2023-11-26 12:01:09.769 INFO  'Application.Payment MessagePump': Attempting to reconnect in 10 seconds.
+2023-11-26 12:01:18.693 INFO  Logging to 'C:\Akshay\Payment\Payment\bin\Debug\net6.0\' with level Info
+2023-11-26 12:01:19.001 INFO  No valid license could be found. Falling back to trial license with start date '2023-10-05'.
+2023-11-26 12:01:19.008 ERROR Trial license expired. Get your free development license at https://particular.net/license/nservicebus?v=7.8.2&t=0&p=windows
+2023-11-26 12:01:19.014 WARN  Opening browser to: https://particular.net/license/nservicebus?v=7.8.2&t=0&p=windows
+2023-11-26 12:01:23.612 INFO  Logging to 'C:\Akshay\Payment\Payment\bin\Debug\net6.0\' with level Info
+2023-11-26 12:01:24.105 INFO  No valid license could be found. Falling back to trial license with start date '2023-10-05'.
+2023-11-26 12:01:24.116 ERROR Trial license expired. Get your free development license at https://particular.net/license/nservicebus?v=7.8.2&t=0&p=windows
+2023-11-26 12:01:24.124 WARN  Opening browser to: https://particular.net/license/nservicebus?v=7.8.2&t=0&p=windows
+2023-11-26 12:01:41.789 INFO  Logging to 'C:\Akshay\Payment\Payment\bin\Debug\net6.0\' with level Info
+2023-11-26 12:01:42.397 INFO  No valid license could be found. Falling back to trial license with start date '2023-10-05'.
+2023-11-26 12:01:42.406 ERROR Trial license expired. Get your free development license at https://particular.net/license/nservicebus?v=7.8.2&t=0&p=windows
+2023-11-26 12:01:42.415 WARN  Opening browser to: https://particular.net/license/nservicebus?v=7.8.2&t=0&p=windows
+2023-11-26 12:06:22.007 WARN  'Application.Payment MessagePump' consumer canceled by broker
+2023-11-26 12:06:22.013 WARN  The circuit breaker for 'Application.Payment MessagePump' is now in the armed state
+2023-11-26 12:06:22.032 INFO  'Application.Payment MessagePump': Attempting to reconnect in 10 seconds.
+2023-11-26 12:06:32.081 INFO  'Application.Payment MessagePump': Reconnecting to the broker failed: RabbitMQ.Client.Exceptions.OperationInterruptedException: The AMQP operation was interrupted: AMQP close-reason, initiated by Peer, code=404, text='NOT_FOUND - no queue 'Application.Payment' in vhost '/'', classId=60, methodId=20
+   at RabbitMQ.Client.Impl.SimpleBlockingRpcContinuation.GetReply(TimeSpan timeout)
+   at RabbitMQ.Client.Impl.ModelBase.BasicConsume(String queue, Boolean autoAck, String consumerTag, Boolean noLocal, Boolean exclusive, IDictionary`2 arguments, IBasicConsumer consumer)
+   at RabbitMQ.Client.Impl.AutorecoveringModel.BasicConsume(String queue, Boolean autoAck, String consumerTag, Boolean noLocal, Boolean exclusive, IDictionary`2 arguments, IBasicConsumer consumer)
+   at NServiceBus.Transport.RabbitMQ.MessagePump.ConnectToBroker() in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 124
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Reconnect() in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 235
+2023-11-26 12:06:32.088 INFO  'Application.Payment MessagePump': Attempting to reconnect in 10 seconds.
+2023-11-26 12:06:42.169 INFO  'Application.Payment MessagePump': Reconnecting to the broker failed: RabbitMQ.Client.Exceptions.OperationInterruptedException: The AMQP operation was interrupted: AMQP close-reason, initiated by Peer, code=404, text='NOT_FOUND - no queue 'Application.Payment' in vhost '/'', classId=60, methodId=20
+   at RabbitMQ.Client.Impl.SimpleBlockingRpcContinuation.GetReply(TimeSpan timeout)
+   at RabbitMQ.Client.Impl.ModelBase.BasicConsume(String queue, Boolean autoAck, String consumerTag, Boolean noLocal, Boolean exclusive, IDictionary`2 arguments, IBasicConsumer consumer)
+   at RabbitMQ.Client.Impl.AutorecoveringModel.BasicConsume(String queue, Boolean autoAck, String consumerTag, Boolean noLocal, Boolean exclusive, IDictionary`2 arguments, IBasicConsumer consumer)
+   at NServiceBus.Transport.RabbitMQ.MessagePump.ConnectToBroker() in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 124
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Reconnect() in /_/src/NServiceBus.Transport.RabbitMQ/Receiving/MessagePump.cs:line 235
+2023-11-26 12:06:42.188 INFO  'Application.Payment MessagePump': Attempting to reconnect in 10 seconds.
+2023-11-26 12:06:45.578 INFO  Logging to 'C:\Akshay\Payment\Payment\bin\Debug\net6.0\' with level Info
+2023-11-26 12:06:46.046 INFO  No valid license could be found. Falling back to trial license with start date '2023-10-05'.
+2023-11-26 12:06:46.056 ERROR Trial license expired. Get your free development license at https://particular.net/license/nservicebus?v=7.8.2&t=0&p=windows
+2023-11-26 12:17:44.538 INFO  Logging to 'C:\Akshay\Payment\Payment\bin\Debug\net6.0\' with level Info
+2023-11-26 12:17:44.888 INFO  No valid license could be found. Falling back to trial license with start date '2023-10-05'.
+2023-11-26 12:17:44.895 ERROR Trial license expired. Get your free development license at https://particular.net/license/nservicebus?v=7.8.2&t=0&p=windows
+2023-11-26 12:18:59.946 INFO  Logging to 'C:\Akshay\Payment\Payment\bin\Debug\net6.0\' with level Info
+2023-11-26 12:19:00.519 INFO  No valid license could be found. Falling back to trial license with start date '2023-10-05'.
+2023-11-26 12:19:00.530 ERROR Trial license expired. Get your free development license at https://particular.net/license/nservicebus?v=7.8.2&t=0&p=windows
+2023-11-26 12:19:06.225 WARN  All queues owned by the endpoint will be purged on startup.
+2023-11-26 12:26:09.074 INFO  Logging to 'C:\Akshay\Payment\Payment\bin\Debug\net6.0\' with level Info
+2023-11-26 12:26:09.625 INFO  No valid license could be found. Falling back to trial license with start date '2023-10-05'.
+2023-11-26 12:26:09.635 ERROR Trial license expired. Get your free development license at https://particular.net/license/nservicebus?v=7.8.2&t=0&p=windows
+2023-11-26 12:26:15.121 WARN  All queues owned by the endpoint will be purged on startup.
+2023-11-26 12:28:46.356 INFO  Logging to 'C:\Akshay\Payment\Payment\bin\Debug\net6.0\' with level Info
+2023-11-26 12:28:46.931 INFO  No valid license could be found. Falling back to trial license with start date '2023-10-05'.
+2023-11-26 12:28:46.941 ERROR Trial license expired. Get your free development license at https://particular.net/license/nservicebus?v=7.8.2&t=0&p=windows
+2023-11-26 12:28:54.536 INFO  Logging to 'C:\Akshay\Payment\Payment\bin\Debug\net6.0\' with level Info
+2023-11-26 12:28:55.136 INFO  No valid license could be found. Falling back to trial license with start date '2023-10-05'.
+2023-11-26 12:28:55.144 ERROR Trial license expired. Get your free development license at https://particular.net/license/nservicebus?v=7.8.2&t=0&p=windows
+2023-11-26 12:29:00.609 WARN  All queues owned by the endpoint will be purged on startup.
+2023-11-26 12:36:21.550 INFO  Logging to 'C:\Akshay\Payment\Payment\bin\Debug\net6.0\' with level Info
+2023-11-26 12:36:22.037 INFO  No valid license could be found. Falling back to trial license with start date '2023-10-05'.
+2023-11-26 12:36:22.044 ERROR Trial license expired. Get your free development license at https://particular.net/license/nservicebus?v=7.8.2&t=0&p=windows
+2023-11-26 12:36:22.059 WARN  Opening browser to: https://particular.net/license/nservicebus?v=7.8.2&t=0&p=windows
+2023-11-26 12:36:28.727 WARN  All queues owned by the endpoint will be purged on startup.
+2023-11-26 12:39:44.140 INFO  Logging to 'C:\Akshay\Payment\Payment\bin\Debug\net6.0\' with level Info
+2023-11-26 12:39:44.444 INFO  No valid license could be found. Falling back to trial license with start date '2023-10-05'.
+2023-11-26 12:39:44.452 ERROR Trial license expired. Get your free development license at https://particular.net/license/nservicebus?v=7.8.2&t=0&p=windows
+2023-11-26 12:39:44.459 WARN  Opening browser to: https://particular.net/license/nservicebus?v=7.8.2&t=0&p=windows
+2023-11-26 12:39:47.491 INFO  Logging to 'C:\Akshay\Payment\Payment\bin\Debug\net6.0\' with level Info
+2023-11-26 12:39:48.162 INFO  No valid license could be found. Falling back to trial license with start date '2023-10-05'.
+2023-11-26 12:39:48.210 ERROR Trial license expired. Get your free development license at https://particular.net/license/nservicebus?v=7.8.2&t=0&p=windows
+2023-11-26 12:39:48.339 WARN  Opening browser to: https://particular.net/license/nservicebus?v=7.8.2&t=0&p=windows
+2023-11-26 12:39:55.414 WARN  All queues owned by the endpoint will be purged on startup.
+2023-11-26 12:41:06.388 INFO  Logging to 'C:\Akshay\Payment\Payment\bin\Debug\net6.0\' with level Info
+2023-11-26 12:41:07.026 INFO  No valid license could be found. Falling back to trial license with start date '2023-10-05'.
+2023-11-26 12:41:07.041 ERROR Trial license expired. Get your free development license at https://particular.net/license/nservicebus?v=7.8.2&t=0&p=windows
+2023-11-26 12:41:12.537 WARN  All queues owned by the endpoint will be purged on startup.
+2023-11-26 12:41:25.876 ERROR Your license has expired
+2023-11-26 12:51:18.046 INFO  Logging to 'C:\Akshay\Payment\Payment\bin\Debug\net6.0\' with level Info
+2023-11-26 12:51:18.692 INFO  No valid license could be found. Falling back to trial license with start date '2023-10-05'.
+2023-11-26 12:51:18.703 ERROR Trial license expired. Get your free development license at https://particular.net/license/nservicebus?v=7.8.2&t=0&p=windows
+2023-11-26 12:51:24.175 WARN  All queues owned by the endpoint will be purged on startup.
+2023-11-26 12:51:35.051 ERROR Your license has expired
+2023-11-26 12:54:06.153 INFO  Logging to 'C:\Akshay\Payment\Payment\bin\Debug\net6.0\' with level Info
+2023-11-26 12:54:06.841 INFO  No valid license could be found. Falling back to trial license with start date '2023-10-05'.
+2023-11-26 12:54:06.852 ERROR Trial license expired. Get your free development license at https://particular.net/license/nservicebus?v=7.8.2&t=0&p=windows
+2023-11-26 12:54:12.283 WARN  All queues owned by the endpoint will be purged on startup.
+2023-11-26 12:54:30.657 ERROR Your license has expired
+2023-11-26 12:55:53.226 ERROR Your license has expired
+2023-11-26 12:57:28.674 INFO  Logging to 'C:\Akshay\Payment\Payment\bin\Debug\net6.0\' with level Info
+2023-11-26 12:57:28.963 INFO  No valid license could be found. Falling back to trial license with start date '2023-10-05'.
+2023-11-26 12:57:28.970 ERROR Trial license expired. Get your free development license at https://particular.net/license/nservicebus?v=7.8.2&t=0&p=windows
+2023-11-26 12:57:28.975 WARN  Opening browser to: https://particular.net/license/nservicebus?v=7.8.2&t=0&p=windows
+2023-11-26 12:57:34.783 WARN  All queues owned by the endpoint will be purged on startup.
+2023-11-26 12:58:13.914 ERROR Your license has expired
+2023-11-26 12:59:27.095 ERROR Your license has expired
+2023-11-26 13:00:29.361 INFO  Logging to 'C:\Akshay\Payment\Payment\bin\Debug\net6.0\' with level Info
+2023-11-26 13:00:33.770 INFO  Logging to 'C:\Akshay\Payment\Payment\bin\Debug\net6.0\' with level Info
+2023-11-26 13:00:34.033 INFO  No valid license could be found. Falling back to trial license with start date '2023-10-05'.
+2023-11-26 13:00:34.039 ERROR Trial license expired. Get your free development license at https://particular.net/license/nservicebus?v=7.8.2&t=0&p=windows
+2023-11-26 13:00:34.042 WARN  To extend your trial license, visit: https://particular.net/license/nservicebus?v=7.8.2&t=0&p=windows
+2023-11-26 13:00:34.546 WARN  All queues owned by the endpoint will be purged on startup.
+2023-11-26 13:04:54.806 INFO  Logging to 'C:\Akshay\Payment\Payment\bin\Debug\net6.0\' with level Info
+2023-11-26 13:04:54.974 INFO  No valid license could be found. Falling back to trial license with start date '2023-10-05'.
+2023-11-26 13:04:54.977 ERROR Trial license expired. Get your free development license at https://particular.net/license/nservicebus?v=7.8.2&t=0&p=windows
+2023-11-26 13:04:54.979 WARN  To extend your trial license, visit: https://particular.net/license/nservicebus?v=7.8.2&t=0&p=windows
+2023-11-26 13:04:55.255 WARN  All queues owned by the endpoint will be purged on startup.
+2023-11-26 13:06:10.725 INFO  Logging to 'C:\Akshay\Payment\Payment\bin\Debug\net6.0\' with level Info
+2023-11-26 13:06:10.890 INFO  No valid license could be found. Falling back to trial license with start date '2023-10-05'.
+2023-11-26 13:06:10.897 ERROR Trial license expired. Get your free development license at https://particular.net/license/nservicebus?v=7.8.2&t=0&p=windows
+2023-11-26 13:06:10.899 WARN  To extend your trial license, visit: https://particular.net/license/nservicebus?v=7.8.2&t=0&p=windows
+2023-11-26 13:06:11.164 WARN  All queues owned by the endpoint will be purged on startup.
+2023-11-26 13:06:27.956 INFO  Logging to 'C:\Akshay\Payment\Payment\bin\Debug\net6.0\' with level Info
+2023-11-26 13:06:28.109 INFO  No valid license could be found. Falling back to trial license with start date '2023-10-05'.
+2023-11-26 13:06:28.113 ERROR Trial license expired. Get your free development license at https://particular.net/license/nservicebus?v=7.8.2&t=0&p=windows
+2023-11-26 13:06:28.115 WARN  To extend your trial license, visit: https://particular.net/license/nservicebus?v=7.8.2&t=0&p=windows
+2023-11-26 13:06:28.366 WARN  All queues owned by the endpoint will be purged on startup.
+2023-11-26 13:08:11.182 INFO  Logging to 'C:\Akshay\Payment\Payment\bin\Debug\net6.0\' with level Info
+2023-11-26 13:08:11.340 INFO  No valid license could be found. Falling back to trial license with start date '2023-10-05'.
+2023-11-26 13:08:11.344 ERROR Trial license expired. Get your free development license at https://particular.net/license/nservicebus?v=7.8.2&t=0&p=windows
+2023-11-26 13:08:11.346 WARN  To extend your trial license, visit: https://particular.net/license/nservicebus?v=7.8.2&t=0&p=windows
+2023-11-26 13:08:11.689 WARN  All queues owned by the endpoint will be purged on startup.
+2023-11-26 13:10:14.997 INFO  Logging to 'C:\Akshay\Payment\Payment\bin\Debug\net6.0\' with level Info
+2023-11-26 13:10:17.271 INFO  Logging to 'C:\Akshay\Payment\Payment\bin\Debug\net6.0\' with level Info
+2023-11-26 13:10:17.421 INFO  No valid license could be found. Falling back to trial license with start date '2023-10-05'.
+2023-11-26 13:10:17.425 ERROR Trial license expired. Get your free development license at https://particular.net/license/nservicebus?v=7.8.2&t=0&p=windows
+2023-11-26 13:10:17.427 WARN  To extend your trial license, visit: https://particular.net/license/nservicebus?v=7.8.2&t=0&p=windows
+2023-11-26 13:10:17.681 WARN  All queues owned by the endpoint will be purged on startup.
