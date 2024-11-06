@@ -12,10 +12,7 @@
 - Logging: Implementing logging for debugging and monitoring.
 - Caching: Implementing caching strategies to improve performance.
 	
-### Architecture
-- Domain-Driven Design (DDD): Adherence to DDD principles for effective domain modeling.
-- Well-Formatted Structure: Clear and organized project structure for maintainability.
-- Layered Architecture: A layered architecture to separate concerns:
+### Architecture Domain-Driven Design (DDD)
 - Application Layer: Handles application logic and orchestrates domain services.
 - Domain Layer: Contains domain entities, value objects, and domain services.
 - DTO Layer: Defines data transfer objects for communication between layers.
