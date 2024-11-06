@@ -23,11 +23,11 @@ namespace Sample.MediatR.WebApi.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<Order>> Get()
+        public async Task<ActionResult<Order>> Get(int id)
         {
-            var z = new GetOrderQuery();
-            var list = await _mediator.Send(z);
-            return Ok(list);
+            var query = new GetOrderQuery() { Id = id };
+            var client = await _mediator.Send(query);
+            return Ok(client);
         }
 
         [HttpPost]

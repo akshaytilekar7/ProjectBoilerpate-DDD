@@ -28,7 +28,12 @@ public class ErrorHandlingMiddleware
         context.Response.ContentType = "application/json";
         context.Response.StatusCode = StatusCodes.Status500InternalServerError;
 
-        var result = JsonSerializer.Serialize(new { error = exception?.Message }, new JsonSerializerOptions()
+        var result = JsonSerializer.Serialize(new
+        {
+            error = exception.Message,
+            stackTrace = exception.StackTrace, // Include stack trace for more information
+            exceptionType = exception.GetType().ToString() // Include the exception type
+        }, new JsonSerializerOptions()
         {
             WriteIndented = true,
             DictionaryKeyPolicy = JsonNamingPolicy.CamelCase,

@@ -1,10 +1,6 @@
 using Microsoft.Extensions.DependencyInjection;
 using NServiceBus;
 using SagaPattern.Saga.Messages;
-using Sample.MediatR.Domain;
-using Sample.MediatR.Domain.Contracts;
-using Sample.MediatR.Message;
-using Sample.MediatR.Persistence.Context;
 
 namespace Sample.MediatR.Persistence.ServiceRegistration
 {

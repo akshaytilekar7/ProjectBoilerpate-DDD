@@ -4,31 +4,33 @@ using System.Threading.Tasks;
 using AutoMapper;
 using MediatR;
 using Sample.MediatR.Domain.Contracts;
+using Sample.MediatR.Dto;
 using Sample.MediatR.Persistence.Notification;
 
 namespace Sample.MediatR.Application.Client.Create;
 
-public class CreateClientCommandHandler : IRequestHandler<CreateClientCommand, Domain.Client>
+public class CreateClientCommandHandler : IRequestHandler<CreateClientCommand, CreateClientResponseDto>
 {
     private readonly IMapper _mapper;
     private readonly IMediator _mediator;
-    private readonly IRepository<Domain.Client> repository;
+    private readonly IRepositoryFactory repositoryFactory;
 
-    public CreateClientCommandHandler(IRepository<Domain.Client> context, IMapper mapper, IMediator mediator)
+    public CreateClientCommandHandler(IRepositoryFactory repositoryFactory, IMapper mapper, IMediator mediator)
     {
-        repository = context;
+        this.repositoryFactory = repositoryFactory;
         _mapper = mapper;
         _mediator = mediator;
     }
 
-    public async Task<Domain.Client> Handle(CreateClientCommand request, CancellationToken cancellationToken)
+    public async Task<CreateClientResponseDto> Handle(CreateClientCommand request, CancellationToken cancellationToken)
     {
-        var client = _mapper.Map<Domain.Client>(request);
-        var result = await repository.AddAsync(client);
+        var client = _mapper.Map<Domain.Client>(request.CreateClient);
+        var result = await repositoryFactory.ClientRepo.AddAsync(client);
+        var response = _mapper.Map<CreateClientResponseDto>(result);
 
         if (result != null)
             await _mediator.Publish(new ClientCreatedDoaminEvent(result.Id));
 
-        return result;
+        return response;
     }
 }

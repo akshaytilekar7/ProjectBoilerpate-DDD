@@ -6,12 +6,17 @@
 
     <ItemGroup>
         <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
+        <PackageReference Include="FluentValidation" Version="11.10.0" />
+        <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+        <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.10.0" />
         <PackageReference Include="MediatR" Version="11.0.0" />
         <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
     </ItemGroup>
 
     <ItemGroup>
+        <ProjectReference Include="..\..\Sample.MediatR.Dto\Sample.MediatR.Dto.csproj" />
         <ProjectReference Include="..\Sample.MediatR.Domain\Sample.MediatR.Domain.csproj" />
+        <ProjectReference Include="..\Sample.MediatR.Message\Sample.MediatR.Message.csproj" />
         <ProjectReference Include="..\Sample.MediatR.Persistence\Sample.MediatR.Persistence.csproj" />
     </ItemGroup>
 

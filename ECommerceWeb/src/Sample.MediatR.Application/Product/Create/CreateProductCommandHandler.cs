@@ -2,7 +2,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using AutoMapper;
 using MediatR;
-using NServiceBus;
 using Sample.MediatR.Domain.Contracts;
 using Sample.MediatR.Message;
 using Sample.MediatR.Persistence.Configuration;

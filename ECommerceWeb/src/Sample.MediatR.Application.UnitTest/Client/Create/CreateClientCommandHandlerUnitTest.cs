@@ -31,9 +31,12 @@ namespace Sample.MediatR.Application.UnitTest.Client.Create
             // Arrange
             _request = new CreateClientCommand()
             {
-                Name = "Akshay",
-                Email = "akshay@gmail.com",
-                Date = new DateTime(2022, 1, 15)
+                CreateClient = new Dto.CreateClientRequestDto()
+                {
+                    Name = "Akshay",
+                    Email = "akshay@gmail.com",
+                    Date = new DateTime(2022, 1, 15)
+                }
             };
 
             var client = _mapper.Map<Domain.Client>(_request);
@@ -59,9 +62,12 @@ namespace Sample.MediatR.Application.UnitTest.Client.Create
             // Arrange
             _request = new CreateClientCommand()
             {
-                Name = "Akshay",
-                Email = "akshay@gmail.com",
-                Date = new DateTime(2022, 1, 15)
+                CreateClient = new Dto.CreateClientRequestDto()
+                {
+                    Name = "Akshay",
+                    Email = "akshay@gmail.com",
+                    Date = new DateTime(2022, 1, 15)
+                }
             };
 
             var client = _mapper.Map<Domain.Client>(_request);

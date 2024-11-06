@@ -6,6 +6,9 @@ using Sample.MediatR.Domain;
 using Sample.MediatR.Persistence;
 using Sample.MediatR.Persistence.ServiceRegistration;
 using Sample.MediatR.Persistence.NServiceBusHandler;
+using FluentValidation.AspNetCore;
+using FluentValidation;
+using Sample.MediatR.Application.Client.Create;
 
 try
 {
@@ -15,8 +18,12 @@ try
     builder.Services.AddApiConfiguration();
 
     string connection = builder.Configuration.GetConnectionString("AppConnectionString");
+   
     builder.Services.ConfigureNServiceBus();
     builder.Services.AddPersistence(connection);
+    builder.Services.AddFluentValidationAutoValidation();
+    builder.Services.AddValidatorsFromAssemblyContaining<CreateClientValidator>();
+
     builder.Services.AddAutoMapper(typeof(MapperProfile));
 
     var array = new[] {

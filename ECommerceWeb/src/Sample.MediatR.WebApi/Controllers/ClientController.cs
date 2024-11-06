@@ -2,11 +2,12 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Sample.MediatR.Application.Client.Create;
 using Sample.MediatR.Application.Client.Get;
-using Sample.MediatR.Persistence.Notification;
+using Sample.MediatR.Dto;
 
 namespace Sample.MediatR.WebApi.Controllers;
 
 [Route("api/[controller]")]
+[ApiController]
 public class ClientController : Controller
 {
     private readonly IMediator _mediator;
@@ -17,9 +18,10 @@ public class ClientController : Controller
     }
 
     [HttpPost]
-    public async Task<IActionResult> PostClientAsync([FromBody] CreateClientCommand client)
+    public async Task<IActionResult> PostClientAsync([FromBody] CreateClientRequestDto client)
     {
-        var id = await _mediator.Send(client);
+        var cmd = new CreateClientCommand() { CreateClient = client };
+        var id = await _mediator.Send(cmd);
         // await _mediator.Publish(new ClientCreatedDoaminEvent(5));
         return Json(id);
     }

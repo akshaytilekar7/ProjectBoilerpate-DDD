@@ -1,7 +1,6 @@
 using NServiceBus;
 using SagaPattern.Saga.Messages;
 using Sample.MediatR.Domain;
-using Sample.MediatR.Domain.Contracts;
 using Sample.MediatR.Message.SagaData;
 using Sample.MediatR.Persistence.Context;
 
@@ -53,7 +52,7 @@ namespace Sample.MediatR.Persistence.NServiceBusHandler
             Console.WriteLine(DateTime.Now + " start shipment");
 
             Data.IsPaymentProcessed = true;
-            Order order = new Order() { Id = message.OrderId };
+            Domain.Order order = new Domain.Order() { Id = message.OrderId };
             if (appDbContext != null)
             {
                 order = appDbContext.Orders.Find(message.OrderId);
@@ -74,7 +73,7 @@ namespace Sample.MediatR.Persistence.NServiceBusHandler
             Data.IsShipmentPrepared = true;
             Thread.Sleep(3000);
 
-            Order order = new Order() { Id = message.OrderId };
+            Domain.Order order = new Domain.Order() { Id = message.OrderId };
             if (appDbContext != null)
             {
                 order = appDbContext.Orders.Find(message.OrderId);
@@ -85,7 +84,7 @@ namespace Sample.MediatR.Persistence.NServiceBusHandler
             await OnCompleteBothAsync(context, order);
         }
 
-        private async Task OnCompleteBothAsync(IMessageHandlerContext context, Order order)
+        private async Task OnCompleteBothAsync(IMessageHandlerContext context, Domain.Order order)
         {
             if (Data.IsShipmentPrepared && Data.IsPaymentProcessed)
             {

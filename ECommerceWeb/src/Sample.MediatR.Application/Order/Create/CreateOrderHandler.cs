@@ -1,10 +1,6 @@
 using AutoMapper;
 using MediatR;
-using Microsoft.EntityFrameworkCore;
-using Sample.MediatR.Application.Client.Create;
 using Sample.MediatR.Domain.Contracts;
-using Sample.MediatR.Persistence.Notification;
-using System;
 using System.Threading;
 using System.Threading.Tasks;
 
