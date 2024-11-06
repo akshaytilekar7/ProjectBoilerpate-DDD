@@ -1,26 +1,26 @@
-using AutoMapper;
-using Moq;
 using Sample.MediatR.Application.Client.Create;
 using Sample.MediatR.Domain.Contracts;
 using System;
-using Xunit;
-using MediatR;
 using System.Threading;
 using System.Threading.Tasks;
 using Sample.MediatR.Persistence.Notification;
+using Moq;
+using Xunit;
+using MediatR;
+using AutoMapper;
 
 namespace Sample.MediatR.Application.UnitTest.Client.Create
 {
     public class CreateClientCommandHandlerUnitTest
     {
         private CreateClientCommand _request;
-        private Mock<IRepository<Domain.Client>> _repositoryMock;
+        private Mock<IRepositoryFactory> _repositoryMock;
         private Mock<IMediator> _meditRMock;
         private IMapper _mapper;
 
         public CreateClientCommandHandlerUnitTest()
         {
-            _repositoryMock = new Mock<IRepository<Domain.Client>>();
+            _repositoryMock = new Mock<IRepositoryFactory>();
             _mapper = MapperInstace.SetMapper(_mapper);
             _meditRMock = new Mock<IMediator>();
         }
@@ -44,7 +44,7 @@ namespace Sample.MediatR.Application.UnitTest.Client.Create
 
             var handler = new CreateClientCommandHandler(_repositoryMock.Object, _mapper, _meditRMock.Object);
 
-            _repositoryMock.Setup(x => x.AddAsync(It.Is<Domain.Client>(c => c.Name == "Akshay"))).ReturnsAsync(client);
+            _repositoryMock.Setup(x => x.ClientRepo.AddAsync(It.Is<Domain.Client>(c => c.Name == "Akshay"))).ReturnsAsync(client);
 
             // Act
             var result = await handler.Handle(_request, CancellationToken.None);
